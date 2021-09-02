@@ -1,4 +1,5 @@
 <template>
+<footer>
   <div class="container">
       <div class="left">
           <div class="col-1">
@@ -28,9 +29,10 @@
           </div>
       </div>
       <div class="right">
-          <p>Copywrite %copy 2021. All rights Reserved</p>
+          <p>Copywrite 2021. All rights Reserved</p>
       </div>
   </div>
+</footer>
 </template>
 
 <script>
@@ -51,10 +53,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer{
+footer {
     margin-top: auto;
     padding: 100px 25px;
     background-color: #303030;
+
     .container{
         display: flex;
         flex-direction: column;
