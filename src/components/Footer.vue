@@ -21,10 +21,10 @@
           </div>
           <div class="col-2">
               <ul>
-                  <router-link class="link" :to="{ name: 'home' }">Home</router-link>
-                  <router-link class="link" :to="{ name: 'blogs' }">Blogs</router-link>
+                  <router-link class="link" :to="{ name: 'Ηome' }">Home</router-link>
+                  <router-link class="link" :to="{ name: 'Βlogs' }">Blogs</router-link>
                   <router-link v-if="user" class="link" :to="{ name: 'newpost'}">Create Post</router-link>
-                  <router-link v-if="!user" class="link" :to="{ name: 'login'}"> LogIn / Register</router-link>
+                  <router-link v-if="!user" class="link" :to="{ name: 'Λogin'}"> LogIn / Register</router-link>
               </ul>
           </div>
       </div>

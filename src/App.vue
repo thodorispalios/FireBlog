@@ -11,6 +11,8 @@
 <script>
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 export default {
   name: 'app',
@@ -23,7 +25,15 @@ export default {
       navigation: null
     }
   },
-  created () {},
+  created () {
+    firebase.auth().onAuthStateChanged((user) => {
+      this.$store.commit("updateUser", user)
+      if (user) {
+        this.$store.dispatch("getCurrentUser")
+      }
+    })
+    this.checkRoute()
+  },
   mounted () {},
   methods: {
     checkRoute() {
@@ -36,7 +46,7 @@ export default {
   },
   watch: {
     $route() {
-      this.checkRoute()
+      this.checkRoute() 
     }
   }
 }
@@ -133,6 +143,12 @@ button,
   pointer-events: none !important;
   cursor: none !important;
   background-color: rgba(128, 128, 128, 0.5) !important;
+}
+
+.error {
+  text-align: center;
+  font-size: 12px;
+  color: red;
 }
 
 .blog-card-wrap {
