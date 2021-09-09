@@ -110,27 +110,26 @@ export default {
     }
 
     .blog-photo {
-    order: 1;
-    flex: 3;
-    box-shadow: 0 4px 6px -1px rgba(0, 0,0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    @media (min-width: 700px){
-        order: 2;
-    }
-    @media (min-width: 800px){
-        flex: 4;
-    }
+        order: 1;
+        flex: 3;
+        box-shadow: 0 4px 6px -1px rgba(0, 0,0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        @media (min-width: 700px){
+            order: 2;
+        }
+        @media (min-width: 800px){
+            flex: 4;
+        }
 
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
-    }
-
-    .blog-wrapper:nth-child(even){
+    &:nth-child(even){
         .blog-content{
             order: 2;
         }

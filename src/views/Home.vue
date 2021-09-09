@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <BlogPost v-if="!user " :post="welcomeScreen"/>
-    <BlogPost :post="post" v-for="{post, index} in sampleBlogPost" :key="index"/>
+    <BlogPost v-if="!user" :post="welcomeScreen"/>
+    <BlogPost :post="post" v-for="(post, index) in sampleBlogPost" :key="index"/>
     <div class="blog-card-wrap">
       <div class="container">
         <h3>View more recent Blogs</h3>
